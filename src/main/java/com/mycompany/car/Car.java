@@ -69,9 +69,13 @@ public class Car {
           
     public void travel(int distance) {
         this.setMileAge(this.getMileAge() + distance);
-        int spentFuel = this.getConsumption() * distance;
+        int spentFuel = this.getConsumption() * distance / 100;
         int newFuel = this.getFuel() - spentFuel;
         this.setFuel(newFuel);
+        if (newFuel > spentFuel)
+            System.out.println("Imate dovoljno goriva za put");
+        else
+            System.out.println("Nemate dovoljno goriva za put");
     }
             
 }
