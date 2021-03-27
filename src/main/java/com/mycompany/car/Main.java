@@ -14,6 +14,8 @@ public class Main {
         System.out.println("Model: " + audi.model);
         System.out.println("Color: " + audi.color);
         audi.printAttributtes();
+        audi.travel(150);
+        audi.printAttributtes();
         
         Car bmw = new Car();
         bmw.brand = "BMW";
@@ -25,7 +27,7 @@ public class Main {
         Car fiat = new Car(2010);
         System.out.println("Godina proizvodnje: " + fiat.getBuildYear());
         
-        Car lada = new Car("Lada", "Niva", "Green", 2018, 0, 50 , 10);
+        Car lada = new Car("Lada", "Niva", "Green", 2018, 0, 50 , 10, 60);
         lada.printAttributtes();
         lada.travel(300);
         lada.printAttributtes();
